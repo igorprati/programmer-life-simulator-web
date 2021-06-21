@@ -141,7 +141,7 @@ var estudarHtml = document.getElementById('html');
 var estudarPython = document.getElementById('python');
 
 estudarHtml.addEventListener('click', function(){
-    if(hora>=22 || energia < 15){
+    if(hora >= 20 || energia < 15){
         mostrar_erro('Você não tem tempo/energia para executar esta ação. Vá dormir!')
     }else{
         expHtml += 1
@@ -162,7 +162,6 @@ estudarHtml.addEventListener('click', function(){
             var salarioTela = document.getElementById('salario') ;
             salarioTela.innerText = `R$${salario}/job`
             cargo.innerHTML = `Cargo atual: Programador Pleno`
-           
             
         }else if(expHtml == 15 || expPython == 15){
             salario = 1000
@@ -175,15 +174,15 @@ estudarHtml.addEventListener('click', function(){
 })
     
 estudarPython.addEventListener('click', function(){
-    if(hora>=22 || energia < 15){
+    if(hora >= 22 || energia < 15){
         mostrar_erro('Você não tem tempo/energia para executar esta ação. Vá dormir!');
     }else{
         expPython += 1
         avancaTempo(4);
         diminuir_energia(15);
-        mostrar_erro(`Você estudou HTML e sua experiência aumentou para ${expPython}`);
+        mostrar_erro(`Você estudou Python e sua experiência aumentou para ${expPython}`);
 
-        if(expHtml == 5 || expPython == 15){
+        if(expHtml == 5 || expPython == 5){
             salario = 200
             mostrar_erro('Parabéns!! Você agora possui experiência de Programador Júnior. Pode começar a trabalhar!');
             salarioTela.innerText = `R$${salario}/job`
@@ -216,10 +215,15 @@ botao_trabalhar.addEventListener('click', function(){
         mostrar_erro('Você precisa de pelo menos 5 níveis de experiência em Html ou Python!');
     }else{
         if(contador_trabalho == false){
-            dinheiro += salario
-            mostrar_erro(`Você trabalhou e ganhou R$${salario}.`);
-            dinheiroTela.innerText = `R$${dinheiro}`
-            contador_trabalho = true
+            if(hora >= 16){
+                mostrar_erro('Você não tem tempo suficiente para realizar esta ação!')
+            }else{
+                dinheiro += salario
+                avancaTempo(8)
+                mostrar_erro(`Você trabalhou e ganhou R$${salario}.`);
+                dinheiroTela.innerText = `R$${dinheiro}`
+                contador_trabalho = true
+            }
         }else{
             mostrar_erro('Você já trabalhou hoje. Tente novamente amanhã!');
         }
@@ -257,19 +261,25 @@ energetico.addEventListener('click', function(){
     restaurar_energia(15)
     avancaTempo(1)
     gastar_dinheiro(50)
+    mostrar_erro(`Você tomou energético e aumentou sua energia para ${energia}`)
 })
 
 descansar.addEventListener('click', function(){
     restaurar_energia(25)
     avancaTempo(3)
     gastar_dinheiro(0)
+    mostrar_erro(`Você tirou uma soneca e aumentou sua energia para ${energia}`)
 })
 
 cafezinho.addEventListener('click', function(){
     restaurar_energia(10)
     avancaTempo(1)
     gastar_dinheiro(30)
+    mostrar_erro(`Você tomou um cafezinho e aumentou sua energia para ${energia}`)
 })
+
+// CONSERTAR BUG: EXPERIÊNCIA E ESTUDOS PYTHON/HTML
+// HMTL NIVEL 10 > PYTHON > 5
 
 
 

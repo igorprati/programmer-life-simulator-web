@@ -50,6 +50,9 @@ ul li a {
     #box__erro{
         top: 200px;
     }
+    #form{
+        transform: scale(0.5);
+    }
 }
 
 #box__erro input{
@@ -184,8 +187,9 @@ main{
     overflow: scroll;
     overflow-x: hidden;
     margin: 0 auto;
-    max-width: 400px;
-    max-height: 700px;
+    max-width: 300px;
+    max-height: 600px;
+    padding: 2% 0;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.294);
 }
 
