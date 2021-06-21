@@ -46,6 +46,12 @@ ul li a {
     padding: 0px 10%;
 }
 
+@media screen and (max-width: 768px){
+    #box__erro{
+        top: 200px;
+    }
+}
+
 #box__erro input{
     margin-top: 20px;
     padding: 5px 10px;

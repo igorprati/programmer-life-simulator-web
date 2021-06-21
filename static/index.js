@@ -217,7 +217,7 @@ botao_trabalhar.addEventListener('click', function(){
     }else{
         if(contador_trabalho == false){
             dinheiro += salario
-            mostrar_erro(`Você trabalhou e ganhou ${salario}`);
+            mostrar_erro(`Você trabalhou e ganhou R$${salario}.`);
             dinheiroTela.innerText = `R$${dinheiro}`
             contador_trabalho = true
         }else{
