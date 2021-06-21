@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    /* border: 1px solid black; */
+}
+
+.hidden{
+    display: none;
+}
+
+ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+#box{
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 30;
+    background-image: linear-gradient(
+        to top right,
+        #FF3535 ,
+        #FFD83B
+    );
+    align-items: center;
+    justify-content: center;
+}
+
+#box__erro{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0px 10%;
+}
+
+#box__erro input{
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 200ms;
+}
+#box__erro input:hover{
+    transform: scale(1.2);
+}
+
+#form{
+    transform: scale(1.6);
+}
+#form > h2{
+    color: white;
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+#form__avatar{
+    display: flex;
+    color: white;
+}
+
+.form__avatar__masc,
+.form__avatar__fem{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.form__avatar__masc input,
+.form__avatar__fem input{
+    margin-top: 10px;
+}
+#form div:nth-child(3),
+#form div:nth-child(4),
+#form div:nth-child(5){
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 15px;
+    color: white;
+}
+
+#form > div:last-child input{
+    background-color: rgb(59, 187, 102);
+    color: white;
+    cursor: pointer;
+}
+
+#form > div > label{
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+#form > div > input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+}
+
+html{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    overflow-y: visible;
+    position: relative;
+    background-image: linear-gradient(
+        to top right,
+        #FF3535 ,
+        #FFD83B
+    )
+}
+
+main::after{
+    content: '';
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+    background-color: rgb(221, 221, 221);
+    position: absolute;
+    left: calc(50% - 20px);
+    bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+
+main::before{
+    content: '';
+    width: 80px;
+    height: 10px;
+    margin-top: 2px;
+    background-color: rgb(66, 66, 66);
+    position: absolute;
+    left: calc(50% - 40px);
+    top: 8px;
+    border-radius: 10px;
+}
+/*  */
+/*  */
+header .header{
+    background-color: #0055AF;
+    color: white;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 5px 0;
+}
+
+/*  */
+/*  */
+main{
+    background-color: #ececec;
+    border: 5px solid rgb(204, 204, 204);
+    border-bottom: 60px solid rgb(204, 204, 204);
+    border-top: 30px solid rgb(204, 204, 204);
+    border-radius: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 400px;
+    max-height: 700px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.294);
+}
+
+main .main__status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+main .main__status h2{
+    font-size: 1rem;
+}
+
+main .main__status p{
+    font-size: 1.3rem;
+}
+
+.status__salario,
+.status__dinheiro,
+.status__dia-e-hora{
+    background-color: #FF3535;
+    width: 100%;
+    text-align: center;
+    margin: 0px 5px;
+    padding: 5px 5px;
+    color: white;
+    border-radius: 5px;
+}
+/*  */
+/*  */
+.personagem__info__status{
+    margin-top: 5px;
+}
+
+.bloco__personagem{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #c8c8c8;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.personagem__img img{
+    margin-left: 20px;
+    width: 100px;
+}
+/*  */
+/*  */
+.menu-principal{
+    margin: 10px 5px;
+    text-align: center;
+}
+
+.menu-principal__menu li{
+    background-color: #c8c8c800;
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.menu-principal__menu li:hover{
+    background-color: #b3b3b3;
+}
+
+.menu-principal__menu li:hover a{
+    color: white;
+}
+
+.menu-principal__menu .submenu li{
+    font-size: 1.2rem;
+}
+
+.menu-principal__menu .submenu li:hover{
+    background-color: tomato;
+}
+
+.menu-principal__menu .submenu{
+    margin-top: 10px;
+    background-color: #b3b3b3;
+}
+
+.menu-principal__menu .submenu a{
+    color: white;
+}
+
+#sair-do-jogo{
+    margin-top: 150px;
+    background-color: #FF3535;
+}
+
+#sair-do-jogo a{
+    color: white;
+}
+

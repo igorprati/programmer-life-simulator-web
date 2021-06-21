@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Programmer Life Simulator</title>
+</head>
+
+<body>
+
+    <div id="box" class="hidden">
+        <div id="box__erro" class="">
+            <h1 id="erro__texto">qweq</h1>
+            <input type="button" id="erro__button" value="Entendi">
+        </div>
+    </div>
+
+    <div class="box__form">
+        <form id="form">
+            <h2>Seja bem-vindo!</h2>
+
+            <div id="form__avatar">
+                <div class="form__avatar__masc">
+                    <img src="../static/images/avatar_masc.png" width="100px" alt="">
+                    <label for="avatar_masc">Jogador</label>
+                    <input type="radio" id="avatar_masc" name="avatar" value="masculino">
+                </div><!--avatar masculino-->
+
+                <div class="form__avatar__fem">
+                    <img src="../static/images/avatar_fem.png" width="100px" alt="">
+                    <label for="avatar_masc">Jogadora</label>
+                    <input type="radio" id="avatar_fem" name="avatar" value="feminino">
+                </div><!--avatar feminino-->
+            </div><!--form avatar-->
+
+            <div class="form__nome">
+                <label for="">Nome</label>
+                <input type="text" id="form-nome">
+            </div><!--form nome-->
+
+            <div class="form__idade">
+                <label for="">Idade</label>
+                <input type="number" id="form-idade">
+            </div><!--form idade-->
+
+            <div class="form__button">
+                <input id='botao' type="button" value="Começar o jogo!">
+            </div><!--form button-->
+
+        </form>
+    </div>
+
+    <main id="tela-jogo" class="container hidden">
+        <header>
+            <div class="header">
+                <div class="header__logo">
+                    <h1>Programmer Life Simulator</h1>
+                </div><!--header__logo-->
+            </div> <!--header-->
+        </header>
+
+        <section>
+            <div class="main">
+                <div class="main__status">
+                    <div class="status__salario">
+                        <h2>Salário</h2>
+                        <p id="salario"></p>
+                    </div><!--status__nome-->
+                    <div class="status__dinheiro">
+                        <h2>Dinheiro</h2>
+                        <p id="dinheiro"></p>
+                    </div><!--status__dinheiro-->
+                    <div class="status__dia-e-hora">
+                        <!-- <h2>Data</h2> -->
+                        <p id="data"></p>
+                    </div><!--status__dia-e-hora-->
+                </div><!--status-->
+
+                <div class="bloco__personagem">
+                    <div class="persongem__info">
+                        <h2 id="info_nome"></h2>
+                        <div class="personagem__info__status">
+                            <p id="info_idade"></p>
+                            <p id="info_cargo">Cargo atual: Desempregado</p>
+                            <p id='info_energia'></p>
+                        </div>
+                    </div><!--persongem__info-->
+                    <div class="personagem__img">
+                        <img id="info_img" src="" alt="">
+                    </div><!--personagem__img-->
+                </div><!--bloco__personagem-->
+
+                <div class="menu-principal">
+                    <ul class="menu-principal__menu">
+                        <li id="trabalhar"><a>Trabalhar</a></li>
+                        <li id="estudar"><a>Estudar</a>
+                            <ul class="submenu hidden" id="submenu__estudar">
+                                <li id="html"><a>Html</a></li>
+                                <li id="python"><a>Python</a></li>
+                            </ul>
+                        </li>
+                        <li id="restaurar-energia"><a>Restaurar Energia</a>
+                            <ul class="submenu hidden" id="submenu__restaurar-energia">
+                                <li id="energetico"><a >Tomar energético</a></li>
+                                <li id="descansar"><a>Descansar</a></li>
+                                <li id="cafezinho"><a>Tomar um cafézinho</a></li>
+                            </ul>
+                        </li>
+                        <li onclick="loja()" id="loja"><a>Ir na loja</a></li>
+                        <li id="dormir" onclick="dormir()"><a>Dormir</a></li>
+                        <li id="sair-do-jogo" ><a>Sair do jogo</a></li>
+                    </ul><!--menu-->
+                </div><!--menu__principal-->
+            </div><!--main-->
+        </section>
+    </main>
+
+
+<script src="/static/index.js"></script>
+</body>
+</html>
