@@ -6,3 +6,5 @@ Foi desenvolvida em Python e roda apenas no terminal através de inputs (comando
 ## A segunda versão
 Esta nova versão foi apenas uma vontade minha de levar mais a frente este projeto que agregou muito na minha formação e nos meus conhecimentos até agora. E como estou estudando e aprendendo Desenvolvimento Web, achei que seria ótimo dar esse UP.
 
+Jogue e teste: https://programmer-life-simulator.herokuapp.com/
+
